@@ -1,0 +1,23 @@
+on:
+  push:                 
+    branches:           
+      - main    
+name: Build and Deploy  
+jobs:
+  web-deploy:
+    name: FTP-Deploy-Action
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:          
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./
+          server-dir: /dev-wako-gp.com/public_html/sanritsu.dev-wako-gp.com/
+          exclude:exclude: "[**/.git*/**, **/node_modules/**, **/build/, .babelrc, .editorconfig, .eslintrc, .prettierrc, .stylelintrc]"
