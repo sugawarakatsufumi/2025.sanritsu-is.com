@@ -1,0 +1,20 @@
+span[id$='-error'][class='error']{
+  color:  $red;
+  padding: 0px 0px;
+  left: 0px;
+  font-size: $font-s8;
+  font-weight: bold;
+  @include mq(sp){
+    font-size: $font-s9;
+  }
+}
+input.error, textarea.error{
+  background: rgba($red, .1) !important;
+}
+// span[id="プライバシー同意-error"][class='error']{
+//   top: -28px;
+//   left: 50%;
+//   width: 85%;
+//   transform: translateX(-50%);
+//   text-align: center;
+// }

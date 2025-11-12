@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?e7pj83');
+  src:  url('fonts/icomoon.eot?e7pj83#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?e7pj83') format('truetype'),
+    url('fonts/icomoon.woff?e7pj83') format('woff'),
+    url('fonts/icomoon.svg?e7pj83#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="sr-icon-"], [class*=" sr-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sr-icon-fb:before {
+  content: "\e906";
+}
+.sr-icon-arrow-circle-right:before {
+  content: "\e907";
+}
+.sr-icon-ig:before {
+  content: "\e908";
+}
+.sr-icon-x:before {
+  content: "\e909";
+}
+.sr-icon-category:before {
+  content: "\e90a";
+}
+.sr-icon-pin:before {
+  content: "\e905";
+}
+.sr-icon-telphone:before {
+  content: "\e904";
+}
+.sr-icon-mail:before {
+  content: "\e900";
+}
+.sr-icon-external:before {
+  content: "\e901";
+}
+.sr-icon-right-arrow:before {
+  content: "\e902";
+}
+.sr-icon-smartphone:before {
+  content: "\e903";
+}

@@ -1,0 +1,70 @@
+$breakpoint: (
+  sp: 'screen and (max-width: 767px)',
+  tab: 'screen and (min-width: 768px)',
+  pc: 'screen and (min-width: 1025px)'
+);
+@mixin mq($bp) {
+  @media #{map-get($breakpoint, $bp)} {
+   @content;
+  }
+}
+@function px-to-vw($size, $width: 1366) {
+  @return ($size / $width) * 100vw;
+}
+@mixin ttl-underline{
+  @content;
+  display: inline-block;
+  &-txt{
+    padding-left: $spacer-s1;
+    @include mq(sp){
+      padding-left: $spacer-s6;
+    }
+  }
+}
+@mixin main-btn{
+  @content;
+  color: #fff;
+  display: block;
+  position: relative;
+  line-height: inherit;
+  border-radius: 80px;
+  font-weight: normal;
+  text-align: center;
+  transition: opacity  .5s;
+  &:hover{
+   opacity:0.7;
+  }
+  & > *:is(.sr-icon-right-arrow, .sr-icon-external){
+    font-size: 80%;
+    margin-left: calc($spacer-s11 - .2rem);
+    position: absolute;
+    right:px-to-vw(20);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+@mixin sr-container{
+  @content;
+  width: px-to-vw($width-base);
+  margin: 0 auto $section-spacer;
+  @include mq(sp){
+    width: $width-base-mb;
+    margin: 0 auto 0;
+  }
+}
+// SVGをインラインで埋め込む関数
+//@mixin inline-svg($path) {
+//  background-image: unquote("url('data:image/svg+xml;charset=utf-8," + str-replace(file_get_contents($path), "#", "%23") + "')");
+//  background-repeat: no-repeat;
+//}
+//@mixin main-btn-eyecatch{
+//  content:"　";
+//  display: inline-block;
+//  mask: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="9.847" height="11.781"><path d="M9.847 5.921v-.06L.696-.004l-.7 1.6L6.689 5.86v.06L0 10.184l.7 1.6Z" data-name="パス 9" fill="currentColor" /></svg>') no-repeat center;
+//  background-color: #fff;
+//  background-size: contain;
+//  @include mq(sp){
+//    
+//  }
+//  @content;
+//}

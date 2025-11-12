@@ -1,0 +1,67 @@
+@charset "UTF-8";
+// ====================
+// サイトの基本設定
+// ====================
+
+// 幅関係の設定
+$width-base: 1000;
+$width-base-mb: calc(100% - 1.5rem - 1.5rem); //全体 
+$width-header-footer:1000;
+$width-header-footer-mb:calc(100% - 1rem - 1rem);
+$header-height:90;
+$header-height-mb:60;
+
+// フォント関係の設定
+$font-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Meiryo", "Noto Sans JP", sans-serif;
+$font-en: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+// カラー設定
+$primary: #FF0D0D;
+$secondary: #047E3A;
+$cta-bg: #FFCBCB;
+$red: #FF0D0D;
+$blue: #3D61AC;
+$green: #047E3A;
+$orange:#FF6E00;
+$black: #231815;
+$gray: #b4b4b4;
+$light-gray: #eeeeee;
+$light-bg: #F8F9FA;
+$secondary-gradient: linear-gradient(to right, #047E3A, #047E3A);
+$primary-gradient: linear-gradient(to left, #FF6E00, #FF6E00);
+
+// フォントサイズ
+$font-s1:10rem;
+$font-s2:8.0rem;
+$font-s3:7.0rem;
+$font-s4:4.0rem;
+$font-s5:3.0rem;
+$font-s6:2.0rem;
+$font-s7:1.8rem;
+$font-s8:1.6rem;
+$font-s9:1.4rem;
+$font-s10:1.2rem;
+$font-s11:1.0rem;
+
+// スペーサー
+$spacer-s1:$font-s1;
+$spacer-s2:$font-s2;
+$spacer-s3:$font-s3;
+$spacer-s4:$font-s4;
+$spacer-s5:$font-s5;
+$spacer-s6:$font-s6;
+$spacer-s7:$font-s7;
+$spacer-s8:$font-s8;
+$spacer-s9:$font-s9;
+$spacer-s10:$font-s10;
+$spacer-s11:$font-s11;
+
+$section-spacer:$spacer-s5 + 1.5rem;
+
+//　文字組み
+$line-height-base: 1.8;
+$line-height-base-mb: 1.8;
+$letter-spacing-base:0rem;
+
+//ドロップシャドウ包括光源
+$box-shadow-base:0 3px 6px rgba(0,0,0,.1);

@@ -1,0 +1,52 @@
+.sr-form-group{
+  margin-bottom: $section-spacer / 2.5;
+  [type="text"],&[type="email"]{
+    border: 1px solid $gray;
+    padding: .3rem;
+    font-size: $spacer-s8;
+    width: 100%;
+  }
+  .sr-form-label{
+    font-weight: bold;
+    span{
+      margin-left: .4rem;
+      color: red;
+    }
+  }
+  textarea{
+    border: 1px solid $gray;
+    padding: .3rem;
+    width: 100%;
+    font-size: $spacer-s8;
+  }
+}
+.sr-submit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:2rem;
+  @include mq(sp){
+    flex-direction: column-reverse;
+
+  }
+  [type="submit"]:not([name="submitBack"]){
+    @include main-btn;
+    background: $primary-gradient;
+    padding: $spacer-s11 $spacer-s5;
+    width: 50%;
+    padding: 1.5rem 0;
+    @include mq(sp){
+      width: 100%;
+    }
+  }
+  [name="submitBack"]{
+    @include main-btn;
+    width: 18%;
+    height:4rem;
+    background:$gray;
+    @include mq(sp){
+      width: 20%;
+    }
+  }
+
+}

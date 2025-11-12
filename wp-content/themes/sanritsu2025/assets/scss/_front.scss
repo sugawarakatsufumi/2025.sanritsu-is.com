@@ -1,0 +1,312 @@
+.front-page-headline{
+  font-size: $font-s5 + .4rem;
+  position: relative;
+  margin-bottom: $section-spacer;
+  text-align: center;
+  font-weight:bold;
+  @include mq(sp){
+    font-size: $font-s6 + .4rem;
+  }
+  &::after{
+    content:"";
+    display: block;
+    position: absolute;
+    left:50%;
+    bottom:0;
+    transform: translateX(-50%);
+    background: linear-gradient(to right, $green 50%, $orange 51%);
+    height:px-to-vw(3);
+    width:px-to-vw(64);
+    @include mq(sp){
+      height:px-to-vw(3, 375);
+      width:px-to-vw(64, 375);
+      bottom:px-to-vw(-10, 375);
+    }
+  }
+}
+.front-page{
+  .kv{
+    background:url(../img/top/kv-bg.webp) no-repeat;
+    background-size: cover;
+    width: 100%;
+    aspect-ratio: 1280 / 450;
+    position: relative;
+    margin-bottom: $spacer-s4;
+    @include mq(sp){
+      aspect-ratio: 1280 / 550;
+      margin-bottom: $section-spacer / 2;
+    }
+    &-ttl{
+      position: absolute;
+      bottom:px-to-vw(10);
+      right:px-to-vw(30);
+      text-align:right;
+      font-weight: bold;
+      transform: skew(-8deg);
+      color: #272727;
+      text-shadow:0 0 px-to-vw(10) #fff, 0 0 px-to-vw(10) #fff, 0 0 px-to-vw(14) #fff, 0 0 px-to-vw(14) #fff;
+      line-height: 1.6;
+      &-sub{
+        display: inline;
+        font-size: px-to-vw(43);
+        border-bottom: px-to-vw(6) solid #2A70AE;
+        @include mq(sp){
+          font-size: px-to-vw(46);
+        }
+      }
+      &-main{
+        font-size: px-to-vw(52);
+        span{color:#2A70AE};
+        @include mq(sp){
+          font-size: px-to-vw(60);
+        }
+      }
+    }
+  }
+}
+.about{
+  &-section{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:$spacer-s5;
+    align-items: center;
+    margin-bottom:$section-spacer;
+    @include mq(sp){
+      grid-template-columns: 1fr;
+      gap:$spacer-s8;
+    }
+  }
+  &-figure{
+    aspect-ratio: 460 / 290;
+    img{
+      width:100%;
+      height:100%;
+    }
+  }
+  &-headline{
+    font-size: $font-s6 + .7rem;
+    margin-bottom:$spacer-s11;
+    color: $green;
+    font-weight:bold;
+    @include mq(sp){
+      text-align:center;
+      font-size: $font-s6 + .4rem;
+      margin-bottom:0;
+    }
+  }
+}
+.prod{
+  padding:($section-spacer * 1.5) 0;
+  background:#F8F9FA;
+  @include mq(sp){
+    padding:($section-spacer) 0;
+  }
+  &-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $section-spacer;
+    @include mq(sp){
+      grid-template-columns: 1fr;
+    }
+  }
+  &-item{
+    background:#fff;
+    box-shadow:0 0 px-to-vw(20) rgba(0,0,0, .1);
+    padding-bottom: $section-spacer / 1.5;
+    display: flex;
+    &-figure{
+      aspect-ratio: 490 / 297;
+      margin-bottom: $section-spacer / 2;
+      overflow: hidden;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+    }
+    &:hover{
+      .prod-item-figure{
+        img{
+          transform: scale(1.1);
+        }
+      }
+    }
+    flex-direction: column;
+    &-body{
+      padding-left: $section-spacer / 2;
+      padding-right: $section-spacer / 2;
+    }
+    &-title{
+      font-size:$font-s6;
+      margin-bottom:  $section-spacer / 5;
+      border-left:solid px-to-vw(6) $green;
+      padding-left:px-to-vw(8);
+      line-height: 1.6;
+      font-weight: bold;
+      @include mq(sp){
+        border-left:solid px-to-vw(6, 375) $green;
+        padding-left:px-to-vw(8 ,375);
+      }
+    }
+    &-description{
+      margin-bottom:  $section-spacer / 4;
+    }
+    &-btn{
+      margin-left: $section-spacer / 2;
+      margin-right: $section-spacer / 2;
+      margin-top:auto;
+      &:hover{
+        opacity:1;
+      }
+    }
+  }
+}
+.biz-partner{
+  padding:($section-spacer * 1.5) 0;
+  @include mq(sp){
+      padding:($section-spacer) 0;
+  }
+  &-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $spacer-s6;
+    grid-auto-rows: 1fr;
+    @include mq(sp){
+      grid-template-columns: repeat(2, 1fr);
+      gap: $spacer-s11;
+    }
+    &-item{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $light-bg;
+      text-align: center;
+      padding: $spacer-s8 $spacer-s7;
+      border-radius: px-to-vw(10);
+      @include mq(sp){
+        padding: px-to-vw(5, 375);
+      }
+      &-ttl{
+      }
+    }
+  }
+}
+.news{
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background:$light-bg;
+  @include mq(sp){
+    margin-bottom: $spacer-s5;
+  }
+  &-inner{
+    width: px-to-vw($width-base);
+    margin: 0 auto;
+    padding: $spacer-s3 0 $spacer-s3;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    @include mq(sp){
+      width: $width-base-mb;
+      margin: 0 auto;
+      padding: $spacer-s5 0;
+    }
+  }
+  .news-header{
+    width: 34%;
+    @include mq(sp){
+      width: 100%;
+    }
+    .heading-main{
+      margin-bottom: $spacer-s4;
+      @include mq(sp){
+        margin-bottom: $spacer-s6;
+      }
+    }
+    .heading-main__ttl{
+      @include mq(pc){
+        border:none;
+      }
+    }
+    .sr-btn-secondary{
+      font-size: $font-s7;
+    }
+  }
+  .news-list{
+    width: calc(62%);
+    @include mq(sp){
+      width: 90%;
+      margin: 0 auto;
+    }
+    &__item{
+      a{
+        color: #6B7280;
+        display: flex;
+        gap: $spacer-s11;
+        font-size: $font-s8;
+        padding: $spacer-s9 0;
+        text-decoration: underline;
+        border-bottom:solid px-to-vw(1) $light-gray;
+        @include mq(sp){
+          position: relative;
+          display: block;
+          border-bottom:solid px-to-vw(1, 375) $light-gray;
+          span,p{
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+  .more-link{
+    @include mq(sp){
+      width: 100%;
+    }
+  }
+}
+.company-info{
+  padding: $section-spacer 0;
+  @include mq(sp){
+    margin-bottom:$section-spacer !important;
+  }
+  &-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    border: px-to-vw(1) solid $light-gray;
+    @include mq(sp){
+      display: block;
+      tr{
+        display: block;
+      }
+    }
+    th, td {
+      border: px-to-vw(1) solid $light-gray;
+      border-right:unset;
+      border-left:unset;
+      padding: $spacer-s7 $spacer-s4;
+      text-align: left;
+      line-height: 1.6;
+      @include mq(sp){
+        display: block;
+        padding: $spacer-s8 $spacer-s6;
+      }
+    }
+    tr:nth-of-type(2n) , tr:nth-of-type(2n) td{
+      background-color: $light-bg;
+    }
+    th {
+      width: 25%;
+      vertical-align: middle;
+      @include mq(sp){
+        width: 100%;
+        background-color: $light-bg;
+      }
+    }
+    td {
+      @include mq(sp){
+        background-color:#fff !important;
+      }
+    }
+  }
+}
