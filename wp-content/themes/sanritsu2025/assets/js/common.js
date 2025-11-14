@@ -14,17 +14,18 @@ jQuery(function($) {
       $('.footer-cta').removeClass('is-active');
     }
   });
-  $('#inquiry-form').validate({
+
+  $('form').validate({
     rules: {
-      "お名前": {
+      "name": {
         required: true,
       },
-      "Email": {
+      "furigana": {
+        required: true,
+      },
+      "email": {
         required: true,
         email: true,
-      },
-      "問い合わせ内容": {
-        required: true,
       }
     },
     errorElement: 'span',
