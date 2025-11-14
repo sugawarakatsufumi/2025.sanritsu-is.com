@@ -1,12 +1,12 @@
 <?php get_template_part('template-parts/header'); ?>
 <div class="container">
   <section class="lower-section">
-    <h1 class="lower-ttl-h1">自販機パーツ取り扱い一覧</h1>
-    <p class="lower-desc">自販機を安定させる固定金具やレベリングスクリューといった設置部材か　ら、ファンモーターやコインパネルなど、自販機の稼働に不可欠な各種パーツまで、幅広い製品をご提供しています。</p>
+    <h1 class="lower-ttl-h1">自販機本体の取り扱い一覧</h1>
+    <p class="lower-desc">お客様のニーズに合わせ、新品・中古を国内外へ幅広く販売。最適な一台を提案しますので、まずはお気軽にご相談ください。</p>
     <div class="prod-item-list-wrap">
       <?php
         $term_args = array(
-          'taxonomy'   => 'parts',
+          'taxonomy'   => 'vending',
           'fields'     => 'all',
           'hide_empty' => true,
           'parent'     => 0, 
@@ -21,7 +21,7 @@
             $unit_str = '点';
 
             // --- 子カテゴリも含めた投稿数を取得（product 投稿タイプに限定）
-            $child_ids = get_term_children( $term->term_id, 'parts' );
+            $child_ids = get_term_children( $term->term_id, 'vending' );
             $term_ids = array_merge( array( $term->term_id ), $child_ids ? $child_ids : array() );
 
             $count_query_args = array(
@@ -29,7 +29,7 @@
               'posts_per_page' => 1,
               'tax_query'      => array(
                 array(
-                  'taxonomy' => 'parts',
+                  'taxonomy' => 'vending',
                   'field'    => 'term_id',
                   'terms'    => $term_ids,
                   'operator' => 'IN',

@@ -63,8 +63,8 @@
       </li>
     </ul>
   </nav>
-  <script src="/assets/js/plugins.js"></script>
-  <script src="/assets/js/common.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/plugins.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/common.js"></script>
   <?php wp_footer(); ?>
 </body>
 </html>

@@ -16,14 +16,14 @@ if (!is_front_page()) {
   echo '">';
   echo '<span itemprop="name">'.get_bloginfo('name').'</span>';
   echo "</a><meta itemprop='position' content='1' /></li> ".$separator;
-  if(is_singular('goodslist')){//製品詳細
+  if(is_singular('product')){//製品詳細
     echo "<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'><a itemprop='item' href='".get_the_permalink($productsList_ID)."'>".'<span itemprop="name">'.get_the_title($productsList_ID)."</span></a><meta itemprop='position' content='2' /></li>";
-    $goods_term = get_the_terms($post->ID, 'goods');
+    $goods_term = get_the_terms($post->ID, 'parts');
     $goods_term = $goods_term[0];
     echo "<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'><a itemprop='item' href='".get_term_link($goods_term)."'>".'<span itemprop="name">'.__($goods_term->name)."</span></a><meta itemprop='position' content='3' /></li>";
-    $goods_child_term = get_the_terms($post->ID, 'goods_child');
+    $goods_child_term = get_the_terms($post->ID, 'parts');
     $goods_child_term = $goods_child_term[0];
-    echo "<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'><a itemprop='item' href='".get_term_link($goods_child_term)."'>".'<span itemprop="name">'.__($goods_child_term->name)."</span></a><meta itemprop='position' content='4' /></li>";
+    //echo "<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'><a itemprop='item' href='".get_term_link($goods_child_term)."'>".'<span itemprop="name">'.__($goods_child_term->name)."</span></a><meta itemprop='position' content='4' /></li>";
     echo "<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'><a itemprop='item' href='".get_the_permalink()."'>".'<span itemprop="name">'.__(get_the_title()).'</span>'."</a><meta itemprop='position' content='5' /></li>";
   }elseif ( is_category() || is_single() ) {//カテゴリー又は記事詳細
     echo '<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">';

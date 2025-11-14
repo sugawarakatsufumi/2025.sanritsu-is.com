@@ -1,10 +1,13 @@
 .sr-form-group{
   margin-bottom: $section-spacer / 2.5;
-  [type="text"],&[type="email"]{
+  [type="text"],&[type="email"],[type="number"]{
     border: 1px solid $gray;
     padding: .3rem;
     font-size: $spacer-s8;
     width: 100%;
+  }
+  [type="number"]{
+    width: 30%;
   }
   .sr-form-label{
     font-weight: bold;
@@ -15,6 +18,7 @@
   }
   textarea{
     border: 1px solid $gray;
+    height: 9em;
     padding: .3rem;
     width: 100%;
     font-size: $spacer-s8;

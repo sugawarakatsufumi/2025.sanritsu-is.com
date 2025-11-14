@@ -178,6 +178,23 @@
   strong{font-weight: bold;}
   figure{margin-bottom: 1em;}
 }
+body.tax-vending, body.vending{
+  .lower-section .prod-item-list li a figure{
+    aspect-ratio: 2 / 3;
+    >img{
+      object-fit: contain;
+      transition: transform 0.5s ease;
+    }
+  }
+  .aside .side-prod-nav{
+    a{
+      padding:px-to-vw(20) px-to-vw(8);
+      @include mq(sp){
+        padding:px-to-vw(10, 375) px-to-vw(8, 375);
+      }
+    }
+  }
+}
 .aside{
   .side-prod-nav{
     position: sticky;

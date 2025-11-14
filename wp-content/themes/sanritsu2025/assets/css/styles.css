@@ -10472,11 +10472,14 @@ input::placeholder, textarea::placeholder {
 .sr-form-group {
   margin-bottom: 1.8rem;
 }
-.sr-form-group [type=text], .sr-form-group[type=email] {
+.sr-form-group [type=text], .sr-form-group[type=email], .sr-form-group [type=number] {
   border: 1px solid #b4b4b4;
   padding: 0.3rem;
   font-size: 1.6rem;
   width: 100%;
+}
+.sr-form-group [type=number] {
+  width: 30%;
 }
 .sr-form-group .sr-form-label {
   font-weight: bold;
@@ -10487,6 +10490,7 @@ input::placeholder, textarea::placeholder {
 }
 .sr-form-group textarea {
   border: 1px solid #b4b4b4;
+  height: 9em;
   padding: 0.3rem;
   width: 100%;
   font-size: 1.6rem;
@@ -11137,6 +11141,22 @@ input::placeholder, textarea::placeholder {
 }
 .cms-content-inner figure {
   margin-bottom: 1em;
+}
+
+body.tax-vending .lower-section .prod-item-list li a figure, body.vending .lower-section .prod-item-list li a figure {
+  aspect-ratio: 2/3;
+}
+body.tax-vending .lower-section .prod-item-list li a figure > img, body.vending .lower-section .prod-item-list li a figure > img {
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+body.tax-vending .aside .side-prod-nav a, body.vending .aside .side-prod-nav a {
+  padding: 1.4641288433vw 0.5856515373vw;
+}
+@media screen and (max-width: 767px) {
+  body.tax-vending .aside .side-prod-nav a, body.vending .aside .side-prod-nav a {
+    padding: 2.6666666667vw 2.1333333333vw;
+  }
 }
 
 .aside .side-prod-nav {
