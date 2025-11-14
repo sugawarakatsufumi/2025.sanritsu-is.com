@@ -88,4 +88,5 @@
     </div><!--/.prod-item-list-wrap-->
   </section><!--/.lower-section-->
 </div>
+<?php get_template_part('template-parts/cta', null, ['catch' => '<span class="main-cta-ttl-line">新品・中古問わず自販機本体に<br class="pc-only">関するご相談は気軽にご相談ください</span>']); ?>
 <?php get_template_part('template-parts/footer'); ?>

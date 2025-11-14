@@ -88,4 +88,5 @@
     </div><!--/.prod-item-list-wrap-->
   </section><!--/.lower-section-->
 </div>
+<?php get_template_part('template-parts/cta', null, ['catch' => '<span class="main-cta-ttl-line">欲しい商品はありましたか？<br class="pc-only">無い場合は気軽にご相談ください！</span>']); ?>
 <?php get_template_part('template-parts/footer'); ?>

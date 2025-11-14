@@ -250,13 +250,13 @@ function pagenation($pages = '', $range = 2){
     // echo "<div class=\"m-pagenation__result\">". $paged."/". $pages."</div>";
     
     // 「前へ」を表示
-    // if($paged > 1) echo "<div class=\"m-pagenation__prev\"><a href='".get_pagenum_link($paged - 1)."'>前へ</a></div>";
+     if($paged > 1) echo "<div class=\"m-pagenation__prev\"><a href='".get_pagenum_link($paged - 1)."'>前へ</a></div>";
     
     // ページ番号を出力
     echo "<ol class=\"m-pagenation__body\">\n";
     for ($i=1; $i <= $pages; $i++){
       if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems )){
-        echo ($paged == $i)? "<li class=\"-current\">".$i."</li>": // 現在のページの数字はリンク無し
+        echo ($paged == $i)? "<li class=\"current\">".$i."</li>": // 現在のページの数字はリンク無し
         "<li><a href='".get_pagenum_link($i)."'>".$i."</a></li>";
       }
     }
@@ -267,7 +267,7 @@ function pagenation($pages = '', $range = 2){
     // }
     echo "</ol>\n";
     // 「次へ」を表示
-    // if($paged < $pages) echo "<div class=\"m-pagenation__next\"><a href='".get_pagenum_link($paged + 1)."'>次へ</a></div>";
+    if($paged < $pages) echo "<div class=\"m-pagenation__next\"><a href='".get_pagenum_link($paged + 1)."'>次へ</a></div>";
     echo "</div>\n";
   }
 }

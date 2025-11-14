@@ -29,24 +29,24 @@
       }
       echo $goods_gallery;
     ?>
+    <?php
+      $org_class='';
+      $terms = get_the_terms( get_the_ID(), 'parts' );
+      if(empty($terms) || is_wp_error($terms)){
+        $terms = get_the_terms( get_the_ID(), 'vending' );
+        $org_class='vending-flg';
+      }
+      if ( $terms && ! is_wp_error( $terms ) ) {
+        $term = $terms[0]; // 最初のタームを使用（複数ある場合は必要に応じて調整）
+        if ( ! empty( $term->description ) ) : ?>
+          <aside class="product-outline-description">
+            <h2><?php echo $term->name; ?>概要</h2>
+            <p><?php echo $term->description; ?></p>
+          </aside>
+        <?php endif;
+      }
+    ?>
     <div class="cms-content-inner">
-      <?php
-        $org_class='';
-        $terms = get_the_terms( get_the_ID(), 'parts' );
-        if(empty($terms) || is_wp_error($terms)){
-          $terms = get_the_terms( get_the_ID(), 'vending' );
-          $org_class='vending-flg';
-        }
-        if ( $terms && ! is_wp_error( $terms ) ) {
-          $term = $terms[0]; // 最初のタームを使用（複数ある場合は必要に応じて調整）
-          if ( ! empty( $term->description ) ) : ?>
-            <aside class="product-outline-description">
-              <h2><?php echo $term->name; ?>概要</h2>
-              <p><?php echo $term->description; ?></p>
-            </aside>
-          <?php endif;
-        }
-      ?>
       <?php echo the_content(); ?>
     </div>
     <div class="prod-cta-btn-wrap">
