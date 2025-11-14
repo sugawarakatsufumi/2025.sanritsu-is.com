@@ -1,22 +1,27 @@
-<aside class="aside">
+<?php
+  // 現在のタクソノミー・ターム取得
+  $queried_term = null;
+  if ( is_tax() ) {
+    $queried_term = get_queried_object();
+    $taxonomy = $queried_term->taxonomy;
+  } elseif ( is_singular() ) {
+    $terms = get_the_terms( get_the_ID(), 'parts' );
+    $org_class='';
+    if(empty($terms) || is_wp_error($terms)){
+      $terms = get_the_terms( get_the_ID(), 'vending' );
+      $org_class='vending-flg';
+    }
+    $queried_term = ( ! empty( $terms ) && ! is_wp_error( $terms ) ) ? $terms[0] : null;
+    $taxonomy = $queried_term ? $queried_term->taxonomy : 'parts';
+  } else {
+    $taxonomy = 'parts';
+  }
+  // 表示用の見出し（タクソノミー名）
+  $tax_obj = get_taxonomy( $taxonomy );
+  $tax_name = $tax_obj ? $tax_obj->labels->name : 'カテゴリ';
+?>
+<aside class="aside <?php echo esc_attr( $org_class ); ?>">
   <nav class="side-prod-nav">
-   <?php
-      // 現在のタクソノミー・ターム取得
-      $queried_term = null;
-      if ( is_tax() ) {
-        $queried_term = get_queried_object();
-        $taxonomy = $queried_term->taxonomy;
-      } elseif ( is_singular() ) {
-        $terms = get_the_terms( get_the_ID(), 'parts' );
-        $queried_term = ( ! empty( $terms ) && ! is_wp_error( $terms ) ) ? $terms[0] : null;
-        $taxonomy = $queried_term ? $queried_term->taxonomy : 'parts';
-      } else {
-        $taxonomy = 'parts';
-      }
-      // 表示用の見出し（タクソノミー名）
-      $tax_obj = get_taxonomy( $taxonomy );
-      $tax_name = $tax_obj ? $tax_obj->labels->name : 'カテゴリ';
-    ?>
     <h2><i class="sr-icon-category"></i>&nbsp;<?php echo esc_html( $tax_name ); ?></h2>
     <?php
       $term_parents_args = array(

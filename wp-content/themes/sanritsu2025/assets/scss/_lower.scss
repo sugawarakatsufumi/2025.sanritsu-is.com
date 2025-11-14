@@ -195,6 +195,14 @@ body.tax-vending, body.vending{
     }
   }
 }
+.aside.vending-flg .side-prod-nav{
+  a{
+    padding:px-to-vw(20) px-to-vw(8);
+    @include mq(sp){
+      padding:px-to-vw(10, 375) px-to-vw(8, 375);
+    }
+  }
+}
 .aside{
   .side-prod-nav{
     position: sticky;

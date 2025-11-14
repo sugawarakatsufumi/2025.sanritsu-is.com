@@ -11159,6 +11159,15 @@ body.tax-vending .aside .side-prod-nav a, body.vending .aside .side-prod-nav a {
   }
 }
 
+.aside.vending-flg .side-prod-nav a {
+  padding: 1.4641288433vw 0.5856515373vw;
+}
+@media screen and (max-width: 767px) {
+  .aside.vending-flg .side-prod-nav a {
+    padding: 2.6666666667vw 2.1333333333vw;
+  }
+}
+
 .aside .side-prod-nav {
   position: sticky;
   top: 7.3206442167vw;
