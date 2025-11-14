@@ -9561,6 +9561,10 @@ body {
   }
 }
 
+body.admin-bar .header {
+  top: 32px;
+}
+
 a, button {
   transition: opacity 0.2s ease-in-out;
 }
@@ -10594,7 +10598,7 @@ input::placeholder, textarea::placeholder {
   }
 }
 
-.front-page .kv {
+.home.page .kv {
   background: url(../img/top/kv-bg.webp) no-repeat;
   background-size: cover;
   width: 100%;
@@ -10603,12 +10607,12 @@ input::placeholder, textarea::placeholder {
   margin-bottom: 4rem;
 }
 @media screen and (max-width: 767px) {
-  .front-page .kv {
+  .home.page .kv {
     aspect-ratio: 1280/550;
     margin-bottom: 2.25rem;
   }
 }
-.front-page .kv-ttl {
+.home.page .kv-ttl {
   position: absolute;
   bottom: 0.7320644217vw;
   right: 2.196193265vw;
@@ -10619,24 +10623,24 @@ input::placeholder, textarea::placeholder {
   text-shadow: 0 0 0.7320644217vw #fff, 0 0 0.7320644217vw #fff, 0 0 1.0248901903vw #fff, 0 0 1.0248901903vw #fff;
   line-height: 1.6;
 }
-.front-page .kv-ttl-sub {
+.home.page .kv-ttl-sub {
   display: inline;
   font-size: 3.1478770132vw;
   border-bottom: 0.439238653vw solid #2A70AE;
 }
 @media screen and (max-width: 767px) {
-  .front-page .kv-ttl-sub {
+  .home.page .kv-ttl-sub {
     font-size: 3.3674963397vw;
   }
 }
-.front-page .kv-ttl-main {
+.home.page .kv-ttl-main {
   font-size: 3.8067349927vw;
 }
-.front-page .kv-ttl-main span {
+.home.page .kv-ttl-main span {
   color: #2A70AE;
 }
 @media screen and (max-width: 767px) {
-  .front-page .kv-ttl-main {
+  .home.page .kv-ttl-main {
     font-size: 4.39238653vw;
   }
 }

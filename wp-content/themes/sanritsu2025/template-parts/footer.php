@@ -1,18 +1,19 @@
+    
+  </main><!-- /.main -->
   <footer class="footer">
     <div class="footer-inner">
       <nav class="footer-nav">
         <ul class="pc-only">
-          <li><a href="/company.php">会社概要</a></li>
-          <li><a href="/service.php">サービス概要</a></li>
-          <li><a href="/customer.php">取引実績</a></li>
-          <li><a href="/access.php">事業所案内</a></li>
-          <li><a href="/pages/">お役立ち情報</a></li>
-          <li><a href="/inquiry.php">お問い合わせ</a></li>
-          <li><a href="/privacy.php">プライバシーポリシー</a></li>
-          <li><a href="/sitemap.php">サイトマップ</a></li>
+          <li><a href="/#company-info">会社概要</a></a></li>
+          <li><a href="/#prod">サービス</a></a></li>
+          <li><a href="/#biz-partner">取引実績</a></a></li>
+          <li><a href="/contents/">新着情報</a></li>
+          <li><a href="/contact/">お問い合わせ</a></li>
+          <li><a href="/privacy/">プライバシーポリシー</a></li>
+          <li><a href="/sitemap/">サイトマップ</a></li>
         </ul>
         <div class="footer-add-tel-social">
-          <a href="/"><img src="/assets/img/common/logo.svg" class="footer-logo" alt="三立ロゴ"></a>
+          <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo.svg" class="footer-logo" alt="三立ロゴ"></a>
           <address class="address-info">
             〒101-0031 <br class="sp-only">東京都千代田区東神田2-9-2第二坂本ビル5階<br>
             TEL 03-6265-3687<br class="sp-only">
@@ -38,7 +39,7 @@
             <p>※このホームページに掲載している内容が正確であるよう最善を尽くしておりますが、万一、内容について誤りがあった場合、および内容に基づいて被った損害について株式会社三立は一切の責任を負いかねます。</p>
           </div>
           <div class="footer-copyright">
-            <p>(c) 1970-2024 <a href="/">三立</a> All Rights Reserved.</p>
+            <p>(c) 1970-<?php echo date("Y"); ?> <a href="/">三立</a> All Rights Reserved.</p>
           </div>
         </div>
       </nav>
@@ -64,3 +65,6 @@
   </nav>
   <script src="/assets/js/plugins.js"></script>
   <script src="/assets/js/common.js"></script>
+  <?php wp_footer(); ?>
+</body>
+</html>
