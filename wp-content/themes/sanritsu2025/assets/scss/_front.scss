@@ -304,6 +304,9 @@
       }
     }
     td {
+      a{
+        text-decoration:underline;
+      }
       @include mq(sp){
         background-color:#fff !important;
       }
