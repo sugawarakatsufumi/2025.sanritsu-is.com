@@ -10301,7 +10301,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .sr-btn-secondary {
-  background: linear-gradient(to right, #047E3A, #047E3A);
+  background: linear-gradient(to right, #108F41, #108F41);
   padding: 1rem 3rem;
   margin: 0 auto;
   color: #fff;
@@ -10352,16 +10352,16 @@ input::placeholder, textarea::placeholder {
 
 .sr-btn-secondary-outline {
   background: #fff;
-  border: 0.1464128843vw solid #047E3A;
+  border: 0.1464128843vw solid #108F41;
   background-color: #fff !important;
-  color: #047E3A !important;
+  color: #108F41 !important;
   padding: 1rem 3rem;
   margin: 0 auto;
-  box-shadow: inset 0 -3px 0 #047e3a !important;
+  box-shadow: inset 0 -3px 0 #108f41 !important;
 }
 @media screen and (max-width: 767px) {
   .sr-btn-secondary-outline {
-    border: 0.5333333333vw solid #047E3A;
+    border: 0.5333333333vw solid #108F41;
   }
 }
 .sr-btn-secondary-outline {
@@ -10575,7 +10575,7 @@ input::placeholder, textarea::placeholder {
   padding-top: 0.7320644217vw;
 }
 .header .g-nav-list__item:not(.contact-button) .sr-icon-right-arrow {
-  color: #047E3A;
+  color: #108F41;
   margin-left: auto;
 }
 .header .g-nav-add-tel-social {
@@ -11277,7 +11277,7 @@ input::placeholder, textarea::placeholder {
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  background: linear-gradient(to right, #047E3A 50%, #FF6E00 51%);
+  background: linear-gradient(to right, #108F41 50%, #FF6E00 51%);
   height: 0.2196193265vw;
   width: 4.6852122987vw;
 }
@@ -11359,7 +11359,7 @@ input::placeholder, textarea::placeholder {
 .about-headline {
   font-size: 2.7rem;
   margin-bottom: 1rem;
-  color: #047E3A;
+  color: #108F41;
   font-weight: bold;
 }
 @media screen and (max-width: 767px) {
@@ -11419,14 +11419,14 @@ input::placeholder, textarea::placeholder {
 .prod-item-title {
   font-size: 2rem;
   margin-bottom: 0.9rem;
-  border-left: solid 0.439238653vw #047E3A;
+  border-left: solid 0.439238653vw #108F41;
   padding-left: 0.5856515373vw;
   line-height: 1.6;
   font-weight: bold;
 }
 @media screen and (max-width: 767px) {
   .prod-item-title {
-    border-left: solid 1.6vw #047E3A;
+    border-left: solid 1.6vw #108F41;
     padding-left: 2.1333333333vw;
   }
 }
@@ -11684,7 +11684,7 @@ input::placeholder, textarea::placeholder {
 .lower-section .lower-ttl-h1 {
   font-weight: bold;
   font-size: 3rem;
-  border-bottom: solid min(2px, 0.1464128843vw) #047E3A;
+  border-bottom: solid min(2px, 0.1464128843vw) #108F41;
   margin-bottom: 2.25rem;
   line-height: 1.6;
 }
@@ -11694,7 +11694,7 @@ input::placeholder, textarea::placeholder {
   }
 }
 .lower-section .lower-ttl-h2 {
-  border-left: solid min(8px, 0.5856515373vw) #047E3A;
+  border-left: solid min(8px, 0.5856515373vw) #108F41;
   font-size: 2rem;
   padding-left: 1.4rem;
   font-weight: bold;
@@ -11770,7 +11770,7 @@ input::placeholder, textarea::placeholder {
 .lower-section .prod-child-list dd a:before {
   font-family: "icomoon" !important;
   content: "\e907";
-  color: #047E3A;
+  color: #108F41;
   margin-right: 0.439238653vw;
   display: inline-block;
 }
@@ -11833,7 +11833,7 @@ input::placeholder, textarea::placeholder {
   gap: 0.8em;
 }
 .cms-contents-list li a .sr-icon-arrow-circle-right {
-  color: #047E3A;
+  color: #108F41;
   display: inline-block;
 }
 .cms-contents-list li a .sr-icon-arrow-circle-right:before {
@@ -11885,7 +11885,7 @@ input::placeholder, textarea::placeholder {
   transition: all 0.2s ease-in-out;
 }
 .m-pagenation .m-pagenation__next a:hover, .m-pagenation .m-pagenation__prev a:hover {
-  background: rgba(4, 126, 58, 0.1);
+  background: rgba(16, 143, 65, 0.1);
 }
 .m-pagenation__body {
   display: flex;
@@ -11903,7 +11903,7 @@ input::placeholder, textarea::placeholder {
   overflow: hidden;
 }
 .m-pagenation__body li.current {
-  background: #047E3A;
+  background: #108F41;
   color: #fff;
 }
 .m-pagenation__body li a {
@@ -11916,7 +11916,7 @@ input::placeholder, textarea::placeholder {
   transition: all 0.2s ease-in-out;
 }
 .m-pagenation__body li a:hover {
-  background: rgba(4, 126, 58, 0.1);
+  background: rgba(16, 143, 65, 0.1);
 }
 
 .cms-content-inner {
@@ -11926,14 +11926,14 @@ input::placeholder, textarea::placeholder {
   margin-bottom: 1em;
 }
 .cms-content-inner h2 {
-  border-left: solid 0.5em #047E3A;
+  border-left: solid 0.5em #108F41;
   padding-left: 0.3125em;
   margin-bottom: 0.625em;
   font-size: 2rem;
   font-weight: bold;
 }
 .cms-content-inner h3 {
-  border-left: solid 0.5em #047E3A;
+  border-left: solid 0.5em #108F41;
   padding-left: 0.5em;
   margin-bottom: 0.625em;
   font-size: 1.8rem;
@@ -11992,7 +11992,7 @@ body.tax-vending .aside .side-prod-nav a, body.vending .aside .side-prod-nav a {
   top: 7.3206442167vw;
 }
 .aside .side-prod-nav h2 {
-  background: #047E3A;
+  background: #108F41;
   padding: 1rem;
   text-align: center;
   color: #fff;
@@ -12017,12 +12017,12 @@ body.tax-vending .aside .side-prod-nav a, body.vending .aside .side-prod-nav a {
 }
 .aside .side-prod-nav a:hover {
   opacity: 1;
-  background: rgba(4, 126, 58, 0.1);
+  background: rgba(16, 143, 65, 0.1);
 }
 .aside .side-prod-nav a:before {
   font-family: "icomoon" !important;
   content: "\e907";
-  color: #047E3A;
+  color: #108F41;
   margin-right: 6px;
 }
 
