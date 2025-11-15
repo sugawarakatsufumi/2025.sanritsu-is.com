@@ -11703,6 +11703,14 @@ input::placeholder, textarea::placeholder {
 .lower-section .lower-desc {
   margin-bottom: 2.25rem;
 }
+.lower-section .product-handling {
+  display: inline-block;
+  line-height: 1;
+  margin-right: 0.8rem;
+  padding: 0.2rem 0.5rem;
+  background: #FF6E00;
+  color: #fff;
+}
 .lower-section .prod-item-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -11777,6 +11785,9 @@ input::placeholder, textarea::placeholder {
   .lower-section .product-gallery {
     gap: 5.3333333333vw;
   }
+}
+.lower-section .product-gallery.vending-flg a {
+  aspect-ratio: 9/16;
 }
 .lower-section .product-gallery a {
   border: solid 1px #b4b4b4;

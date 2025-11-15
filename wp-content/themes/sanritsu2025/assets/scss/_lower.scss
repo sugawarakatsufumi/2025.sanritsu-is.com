@@ -68,6 +68,14 @@
   .lower-desc{
     margin-bottom: $section-spacer / 2;
   }
+  .product-handling{
+    display: inline-block;
+    line-height: 1;
+    margin-right:.8rem;
+    padding:.2rem .5rem;
+    background:$orange;
+    color: #fff;
+  }
   .prod-item-list{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -139,6 +147,11 @@
     justify-content: center;
     @include mq(sp){
       gap:px-to-vw(20, 375);
+    }
+    &.vending-flg{
+      a{
+        aspect-ratio: 9 /16;
+      }
     }
     a{
       border:solid 1px $gray;

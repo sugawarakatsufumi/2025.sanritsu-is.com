@@ -7,6 +7,11 @@
         <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/img/common/no-image.webp' ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>">
       <?php endif; ?>
     </figure>
-    <h2 class="prod-title"><?php the_title(); ?></h2>
+    <h2 class="prod-title">
+      <?php if ( ! empty( $handling = get_field('handling') ) ) : ?>
+        <span class="product-handling"><?php echo $handling[0]; ?></span>
+      <?php endif; ?>
+      <?php the_title(); ?>
+    </h2>
   </a>
 </li>
