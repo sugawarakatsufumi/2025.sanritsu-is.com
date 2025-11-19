@@ -10271,6 +10271,10 @@ a:hover, button:hover {
   }
 }
 
+.normal-font-kw {
+  font-weight: bold;
+}
+
 input::placeholder, textarea::placeholder {
   opacity: 0.5;
 }
