@@ -10272,7 +10272,7 @@ a:hover, button:hover {
 }
 
 .normal-font-kw {
-  font-weight: bold;
+  font-weight: normal;
 }
 
 input::placeholder, textarea::placeholder {
